@@ -1,0 +1,63 @@
+.images img{
+    width:50%;
+}
+.menu-left{
+    background:#555555;
+}
+.list ul li{
+    background:#555555;
+}
+.title i{
+   padding-left:86%;
+   margin-bottom:30px;
+}
+.title p{
+    padding-left:30%;
+    margin-bottom:30px;
+}
+.title img{
+    width:40%;
+    margin-left:25%;
+  
+}
+.menu-left{
+    color:#FFFFFF;
+
+}
+.search{
+    margin-top:80px;
+    margin-bottom: 45px;
+}
+.search select{
+    border-radius: 5px;
+    border:1px solid #FF6600;
+    height:35px;
+    text-align:center;
+    margin-left: 15px;
+    margin-right:15px;
+}
+.mar-btn{
+    margin-left:13%;
+}
+.my-btn{
+    width:80px;
+}
+.search input{
+ border:1px solid #FF6600;
+ border-radius:20px;
+ height:30px;
+ 
+}
+.foot{
+    margin-left:77%;
+    
+}
+.pag{
+    margin-top:40px;
+}
+.pag span{
+    padding-top:10px;
+}
+.card{
+    margin-top:20px;
+}

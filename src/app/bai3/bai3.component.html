@@ -1,0 +1,46 @@
+<div class="card">
+        <div class="card-header">
+                <ul class="nav">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#">Muatc</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Cart</a>
+                        </li>
+                </ul>
+        </div>
+        <div class="card-body">
+          <h3>Your Card</h3>
+          <table class="table table-bordered">
+                <thead>
+                  <tr class="active">
+                    <th>ID</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quality</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor ='let p of product'>
+                    <td>{{p.ID}}</td>
+                    <td><img src="{{p.image}}" alt="jung" width="60%" class="mar-image"></td>
+                    <td>{{p.name}}</td>
+                    <td>{{p.price}}</td>
+                    <td class="format-button">{{p.quatity}}<button (click)="Tang(p.ID)" type="button" class="btn btn-success">+</button><button type="button" class="btn btn-danger">-</button></td>
+                    <td><button type="button" class="btn btn-primary">View</button>  <button type="button" class="btn btn-danger">Delete</button></td>
+                  </tr>
+                  <tr>
+                      <td colspan="5">
+                         Total Price
+                      </td>
+                      <td>{{Tong()}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+      </div>

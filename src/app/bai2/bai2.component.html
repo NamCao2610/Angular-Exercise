@@ -1,0 +1,22 @@
+<div class="card">
+<table>
+    <thead>
+    <tr>
+        <td>Hinh</td>
+        <td>Ho va ten</td>
+        <td>Ngay sinh</td>
+        <td>Gioi tinh</td>
+        <td>Diem</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor='let p of student'>
+        <td><img src="{{p.photo}}" alt="bts" width="200" height="200"></td>
+        <td>{{p.fullname}}</td>
+        <td>{{p.birthday}}</td>
+        <td>{{p.gender}}</td>
+        <td>{{p.mark}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
