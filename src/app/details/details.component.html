@@ -1,0 +1,34 @@
+<div class="card">
+        <div class="card-header">
+          Details
+        </div>
+        <div class="card-body">
+         <div>
+             <p>Last Name</p>
+             <p>{{students[hs].LastName}}</p>
+             <p>First Name</p>
+             <p>{{students[hs].FirstMidName}}</p>
+             <p>Enroll Date</p>
+             <p>{{students[hs].EnrollmentDate}}</p>
+         </div>
+
+          <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Course Title</th>
+                    <th>Grade</th>
+                    <th>Credits</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor='let p of st'>
+                     <td>{{p.Title}}</td>
+                     <td>{{p.Grade}}</td>
+                     <td>{{p.Credits}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+      </div>
+    
