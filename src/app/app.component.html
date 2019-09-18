@@ -1,8 +1,10 @@
 <div class="container">
-  <app-bai1></app-bai1>
-  <app-bai2></app-bai2>
-  <app-bai3></app-bai3>
-  <app-details></app-details>
-  <app-product></app-product>
-  <app-infor></app-infor>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a [routerLink]="['']">Home</a></li>
+    <li class="breadcrumb-item"><a [routerLink]="['liststudent']">Sinh vien</a></li>
+    
+  </ol>
+</nav>
+<router-outlet></router-outlet>
 </div>

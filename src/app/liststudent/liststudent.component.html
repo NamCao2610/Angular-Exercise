@@ -1,0 +1,55 @@
+<div class="card">
+    <div class="card-header">
+      Danh sach sinh vien 
+    </div>
+    <div class="card-body">
+      <input type="text" placeholder="Search For..."><button type="button" class="btn btn-primary" style="height:35px; width:50px; margin-left:15px; margin-bottom: 5px;"><i class='fas fa-search'></i></button>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>LastName</th>
+            <th>FirstName</th>
+            <th>EnrollDate</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let p of students'>
+            <td>{{p.LastName}}</td>
+            <td>{{p.FirstMidName}}</td>
+            <td>{{p.EnrollmentDate}}</td>
+            <td>
+              <a [routerLink]="['/liststudent',p.ID]">{{p.ID}}</a>
+              <button (click)="remove(p.ID)" class="format"><span class="glyphicon glyphicon-trash"></span></button>
+          </td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <!--Hang footer-->
+      <footer class="mar">
+        <div class="row">
+          <div class="col-lg-8 col-sm-8">
+              <p>Showing 1 of 3</p>
+          </div>
+          <div class="col-lg-4 col-sm-4">
+              <nav aria-label="Page navigation example">
+                  <ul class="pagination">
+                    
+                      <li class="page-item active" aria-current="page">
+                          <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                        </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>

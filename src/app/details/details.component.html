@@ -1,48 +1,34 @@
 <div class="card">
-    <div class="card-header">
-      Leaf Rake
-    </div>
-    <div class="card-body">
-      <div class="row">
-          <div class="col-lg-5 col-sm-5">
-            <table class="table">
+        <div class="card-header">
+          Details
+        </div>
+        <div class="card-body">
+         <div>
+             <p>Last Name</p>
+             <p>{{students[hs].LastName}}</p>
+             <p>First Name</p>
+             <p>{{students[hs].FirstMidName}}</p>
+             <p>Enroll Date</p>
+             <p>{{students[hs].EnrollmentDate}}</p>
+         </div>
+
+          <table class="table table-bordered">
                 <thead>
                   <tr>
-                    <th>Name:</th>
-                    <th>Leaf Rake</th>
+                    <th>Course Title</th>
+                    <th>Grade</th>
+                    <th>Credits</th>
+                    
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Code</td>
-                    <td>GDN-0011</td>
-                  </tr>
-                  <tr>
-                    <td>Description</td>
-                    <td>Lake Reaf with 48 inch wooden handle.</td>
-                  </tr>
-                  <tr>
-                    <td>Availability:</td>
-                    <td>March 19,2016</td>
-                  </tr>
-                  <tr>
-                    <td>Price:</td>
-                    <td>$19.95</td>
-                  </tr>
-                  <tr>
-                    <td>5 star Rating:</td>
-                    <td>3.2</td>
+                  <tr *ngFor='let p of st'>
+                     <td>{{p.Title}}</td>
+                     <td>{{p.Grade}}</td>
+                     <td>{{p.Credits}}</td>
                   </tr>
                 </tbody>
               </table>
-          </div>
-
-          <div class="col-lg-7 col-sm-7 image">
-              <img src="assets/download.jpg" alt="cay choi" style="margin-left:20%">
-          </div>
+        </div>
       </div>
-    </div>
-    <div class="card-footer">
-      Back
-    </div>
-  </div>
+    

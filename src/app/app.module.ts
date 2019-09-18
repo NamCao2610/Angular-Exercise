@@ -1,26 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Bai1Component } from './bai1/bai1.component';
-import { Bai2Component } from './bai2/bai2.component';
-import { Bai3Component } from './bai3/bai3.component';
+import { ListstudentComponent } from './liststudent/liststudent.component';
 import { DetailsComponent } from './details/details.component';
-import { ProductComponent } from './product/product.component';
-import { InforComponent } from './infor/infor.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Bai1Component,
-    Bai2Component,
-    Bai3Component,
-    DetailsComponent,
-    ProductComponent,
-    InforComponent
+    ListstudentComponent,
+    DetailsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+      RouterModule.forRoot(
+        [
+          {path:'',component:ListstudentComponent},
+          {path:'liststudent',component:ListstudentComponent},
+          {path:'liststudent/:ID',component:DetailsComponent},
+          {path:'**',redirectTo:'liststudent',pathMatch:'full'}
+        ]
+      ),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
